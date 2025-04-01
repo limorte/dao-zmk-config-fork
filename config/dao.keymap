@@ -23,12 +23,12 @@
 //    debounce-release-ms = <10>;
 //};
 
-/// {
-//    chosen {
-//        zmk,matrix_transform = &default_transform;
-//        // zmk,matrix_transform = &extra_keys_transform;
-//    };
-//};
+/ {
+    chosen {
+        zmk,physical_layout = &dao_crkbd_layout;
+        // zmk,physical_layout = &dao_full_layout;
+    };
+};
 
 / {
     behaviors {
