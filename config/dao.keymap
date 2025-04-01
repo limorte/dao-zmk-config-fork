@@ -16,12 +16,12 @@
 #define ADJUST 3
 
 
-&lt { quick_tap_ms = <219>; };//150
-&mt { quick_tap_ms = <219>; };//150
-&kscan0 {
-    debounce-press-ms = <10>;
-    debounce-release-ms = <10>;
-};
+&lt { quick_tap_ms = <150>; };//150
+&mt { quick_tap_ms = <150>; };//150
+//&kscan0 {
+//    debounce-press-ms = <10>;
+//    debounce-release-ms = <10>;
+//};
 
 / {
     chosen {
