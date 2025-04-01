@@ -16,8 +16,8 @@
 #define ADJUST 3
 
 
-&lt { quick_tap_ms = <150>; };//150
-&mt { quick_tap_ms = <150>; };//150
+&lt { quick_tap_ms = <200>; };//150
+&mt { quick_tap_ms = <200>; };//150
 //&kscan0 {
 //    debounce-press-ms = <10>;
 //    debounce-release-ms = <10>;
@@ -35,13 +35,13 @@
         tdF: tap_dance_lang1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp F>, <&kp Z>; // LG(F11)
+            tapping-term-ms = <200>;
+            bindings = <&kp F>, <&kp LG(F11)>;
         };
         tdJ: tap_dance_lang2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp J>, <&kp LG(F12)>;
         };
         lh_pht: left_positional_hold_tap {
