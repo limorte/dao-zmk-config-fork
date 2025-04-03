@@ -16,8 +16,8 @@
 #define ADJUST 3
 
 
-&lt { quick_tap_ms = <200>; };//150
-&mt { quick_tap_ms = <200>; };//150
+&lt { quick_tap_ms = <150>; };//150
+&mt { quick_tap_ms = <150>; };//150
 //&kscan0 {
 //    debounce-press-ms = <10>;
 //    debounce-release-ms = <10>;
@@ -30,34 +30,46 @@
     };
 };
 
-/ {
-    behaviors {
-        tdF: tap_dance_lang1 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp F>, <&kp LG(F11)>;
-        };
-        tdJ: tap_dance_lang2 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp J>, <&kp LG(F12)>;
-        };
-        //lh_pht: left_positional_hold_tap {
-        //    compatible = "zmk,behavior-hold-tap";
-        //    #binding-cells = <2>;
-        //    flavor = "tap-unless-interrupted";
-        //    tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
-        //    quick-tap-ms = <200>;
-        //    bindings = <&kp>, <&kp>;
-        //    hold-trigger-key-positions = <0 1 2 3 4 5>;    // <---[[right-hand keys]]
-        //};
-    };
+/// {
+//    behaviors {
+//        tdF: tap_dance_lang1 {
+//            compatible = "zmk,behavior-tap-dance";
+//            #binding-cells = <0>;
+//            tapping-term-ms = <200>;
+//            bindings = <&kp F>, <&kp LG(F11)>;
+//        };
+//        tdJ: tap_dance_lang2 {
+//            compatible = "zmk,behavior-tap-dance";
+//            #binding-cells = <0>;
+//            tapping-term-ms = <200>;
+//            bindings = <&kp J>, <&kp LG(F12)>;
+//        };
+//        //lh_pht: left_positional_hold_tap {
+//        //    compatible = "zmk,behavior-hold-tap";
+//        //    #binding-cells = <2>;
+//        //    flavor = "tap-unless-interrupted";
+//        //    tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+//        //    quick-tap-ms = <200>;
+//        //    bindings = <&kp>, <&kp>;
+//        //    hold-trigger-key-positions = <0 1 2 3 4 5>;    // <---[[right-hand keys]]
+//        //};
+//    };
 
 
     combos {
         compatible = "zmk,combos";
+
+        ChLangLeft {
+            bindings = <&kp LG(F11)>;
+            key-positions = <27 28>;
+            timeout-ms = <20>;
+        };
+
+        ChLangRight {
+            bindings = <&kp LG(F12)>;
+            key-positions = <31 32>;
+            timeout-ms = <20>;
+        };
 
         ParaLeft {
             bindings = <&kp LEFT_PARENTHESIS>;
@@ -103,7 +115,7 @@
 
         SingleQuote {
             bindings = <&kp APOSTROPHE>;
-            key-positions = <19 20>;
+            key-positions = <fb>;
             timeout-ms = <20>;
         };
 
