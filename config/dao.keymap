@@ -30,7 +30,7 @@
     };
 };
 
-/// {
+/ {
 //    behaviors {
 //        tdF: tap_dance_lang1 {
 //            compatible = "zmk,behavior-tap-dance";
