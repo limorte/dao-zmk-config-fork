@@ -115,7 +115,7 @@
 
         SingleQuote {
             bindings = <&kp APOSTROPHE>;
-            key-positions = <fb>;
+            key-positions = <19 20>;
             timeout-ms = <20>;
         };
 
